@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - SchemaSherpa</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: linear-gradient(to right, #2d2d2d, #404040);
+            color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover, .nav-links .active {
+            color: #00b4d8;
+        }
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .theme-toggle {
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: white;
+            transition: transform 0.3s;
+        }
+        .theme-toggle:hover {
+            transform: scale(1.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .schema-output-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        .dark-mode {
+            background: linear-gradient(to right, #1a1a1a, #2d2d2d);
+            color: white;
+        }
+        .dark-mode .schema-output-container {
+            background: rgba(40, 40, 40, 0.95);
+            color: white;
+        }
+        .architecture-section {
+            margin-top: 2rem;
+        }
+        .architecture-section img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        .features-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .features-list li {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .features-list li::before {
+            content: "✔️";
+            margin-right: 0.5rem;
+            color: #00b4d8;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo"> <a href="/index">SchemaSherpa</a></div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about" class="active">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
+        <div class="header-controls">
+            <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="schema-output-container">
+            <h1>About SchemaSherpa</h1>
+            <p>SchemaSherpa is a cutting-edge SQL query generator that transforms natural language into SQL queries, making database interactions seamless and intuitive.</p>
+            
+            <h2>Our Mission</h2>
+            <p>Our mission is to democratize database querying by providing an AI-powered tool that simplifies SQL generation for users of all skill levels.</p>
+            
+            <h2>Features</h2>
+            <ul class="features-list">
+                <li>AI-powered SQL generation for accurate and efficient query creation.</li>
+                <li>Web-based interface for easy access and interaction with databases.</li>
+                <li>Secure and efficient processing to ensure data safety and performance.</li>
+                <li>User-friendly design tailored for both beginners and experts.</li>
+                <li>Real-time feedback and suggestions to improve query quality.</li>
+            </ul>
+
+            <div class="architecture-section">
+                <h2>Architecture Used</h2>
+                <p>SchemaSherpa leverages a robust architecture that combines Natural Language Processing (NLP) with advanced machine learning models to interpret user inputs and generate precise SQL queries. The system is built on a scalable backend that ensures high performance and reliability.</p>
+                <img src="/images/sql.png" alt="SQL Architecture Diagram">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("dark-mode");
+            const themeButton = document.querySelector(".theme-toggle");
+            themeButton.textContent = document.body.classList.contains("dark-mode") ? "🌞" : "🌙";
+        }
+    </script>
+</body>
+</html>

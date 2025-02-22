@@ -1,0 +1,117 @@
+<header class="site-header">
+    <div class="header-container">
+        <!-- Company Name at Left -->
+        <div class="logo">
+            <h2>SchemaSherpa</h2>
+        </div>
+
+        <!-- Center Navigation -->
+        <nav class="nav-links">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="#" class="db-link">Connect to Your DB</a></li>
+            </ul>
+        </nav>
+
+        <!-- Connect to Database at Right -->
+        <div class="db-connect">
+            <a href="#" class="db-button">Connect to Database</a>
+        </div>
+    </div>
+
+    <style>
+        /* Reset default margins and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .site-header {
+            background-color: #f8f9fa;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            justify-content: center;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .logo h2 {
+            color: #333;
+            font-size: 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .nav-links ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        .db-connect {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .db-button {
+            background-color: #007bff;
+            color: white !important;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .db-button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+        .db-link {
+            font-weight: bold;
+            color: #007bff !important;
+            text-decoration: none;
+        }
+
+        .db-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</header>
